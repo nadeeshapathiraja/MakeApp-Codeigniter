@@ -1,0 +1,17 @@
+.logo {
+    margin: 1em;
+}
+
+.search {
+    margin: 1em;
+}
+
+.text {
+    width: 80%;
+    display: inline-block;
+}
+
+.sbtn {
+    background: #eee;
+    width: 80px;
+}
