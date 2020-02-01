@@ -3,7 +3,25 @@
 					<div class="well">
                         <h3>Login Page</h3>
                         <hr/>
-                        <form action="<?=base_url()?>index.php/member/login_action">
+                        <?php
+                            if(validation_errors()){?>
+                                <div class="alert alert-danger">
+                                    <?php echo validation_errors(); ?>
+                                </div>
+                        <?php
+                            }
+                        ?>
+                        <!-- Get Flash Data -->
+                        <?php
+                            if($this->session->flashdata('MSG')){?>
+                                <div class="alert alert-danger">
+                                    <?php echo $this->session->flashdata('MSG') ?>
+                                </div>
+                        <?php
+                            }
+                        ?>
+                        <hr/>
+                        <form action="<?=base_url()?>index.php/member/login_action" method="post">
                             <div class="from-group">
                                 <label>Email</label>
                                 <input type="email" name="email" class="form-control">
